@@ -1,0 +1,51 @@
+isic_id,attribution,copyright_license,age_approx,anatom_site_general,benign_malignant,clin_size_long_diam_mm,diagnosis,diagnosis_confirm_type,image_type,lesion_id,mel_class,mel_mitotic_index,mel_thick_mm,mel_ulcer,melanocytic,patient_id,sex
+ISIC_0541318,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,55,lower extremity,benign,10.1,nevus,histopathology,dermoscopic,IL_7366482,,,,,True,IP_6119246,male
+ISIC_0961778,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,75,upper extremity,malignant,5.2,melanoma,histopathology,dermoscopic,IL_2448449,melanoma in situ,,,,True,IP_4523797,female
+ISIC_1317150,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,80,posterior torso,benign,6.0,nevus,histopathology,dermoscopic,IL_7590638,,,,,True,IP_0954322,male
+ISIC_1436751,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,35,lower extremity,benign,2.7,nevus,histopathology,dermoscopic,IL_9307489,,,,,True,IP_5034423,male
+ISIC_1636416,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,30,lower extremity,benign,2.4,nevus,histopathology,dermoscopic,IL_3113470,,,,,True,IP_0435040,female
+ISIC_1871813,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,50,lower extremity,benign,2.4,nevus,histopathology,dermoscopic,IL_2200390,,,,,True,IP_2321294,female
+ISIC_1873909,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,50,lower extremity,benign,0.8,nevus,histopathology,dermoscopic,IL_9443249,,,,,True,IP_3727647,female
+ISIC_2190396,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,35,posterior torso,malignant,2.8,melanoma,histopathology,dermoscopic,IL_9326149,melanoma in situ,,,,True,IP_6334660,male
+ISIC_2375479,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,50,lower extremity,benign,2.7,nevus,histopathology,dermoscopic,IL_4179838,,,,,True,IP_3727647,female
+ISIC_2468476,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,50,lower extremity,malignant,3.2,melanoma,histopathology,dermoscopic,IL_1235162,melanoma in situ,,,,True,IP_5078204,male
+ISIC_2593104,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,50,lower extremity,malignant,3.3,melanoma,histopathology,dermoscopic,IL_6019423,melanoma in situ,,,,True,IP_8910504,male
+ISIC_2593673,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,40,upper extremity,benign,3.8,nevus,histopathology,dermoscopic,IL_1409962,,,,,True,IP_7186053,female
+ISIC_2772824,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,50,head/neck,malignant,4.9,melanoma,histopathology,dermoscopic,IL_5087915,melanoma in situ,,,,True,IP_3757165,male
+ISIC_3041861,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,85,anterior torso,malignant,9.2,melanoma,histopathology,dermoscopic,IL_0006755,melanoma in situ,,,,True,IP_6700171,female
+ISIC_3138977,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,50,lateral torso,benign,4.5,nevus,histopathology,dermoscopic,IL_4170874,,,,,True,IP_3103178,male
+ISIC_3622555,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,50,lower extremity,malignant,7.5,melanoma,histopathology,dermoscopic,IL_5368862,melanoma in situ,,,,True,IP_5709181,female
+ISIC_3783659,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,65,posterior torso,malignant,8.8,melanoma,histopathology,dermoscopic,IL_0309038,melanoma in situ,,,,True,IP_2273278,male
+ISIC_3821765,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,55,lower extremity,benign,2.8,nevus,histopathology,dermoscopic,IL_0950738,,,,,True,IP_9826278,female
+ISIC_3872441,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,45,lower extremity,malignant,1.5,melanoma,histopathology,dermoscopic,IL_5443460,invasive melanoma,0/mm^2,0.3,False,True,IP_4714140,female
+ISIC_3957649,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,45,lower extremity,benign,2.5,nevus,histopathology,dermoscopic,IL_4696811,,,,,True,IP_5573847,female
+ISIC_4027194,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,35,lower extremity,malignant,1.8,melanoma,histopathology,dermoscopic,IL_0687348,melanoma in situ,,,,True,IP_6770558,female
+ISIC_4127882,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,45,posterior torso,benign,5.6,nevus,histopathology,dermoscopic,IL_7007160,,,,,True,IP_3878998,male
+ISIC_4221304,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,30,lower extremity,malignant,1.7,melanoma,histopathology,dermoscopic,IL_2261784,melanoma in situ,,,,True,IP_5704453,female
+ISIC_4292976,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,35,posterior torso,benign,1.5,nevus,histopathology,dermoscopic,IL_3568928,,,,,True,IP_1494754,female
+ISIC_4334691,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,35,posterior torso,benign,2.9,nevus,histopathology,dermoscopic,IL_0882048,,,,,True,IP_2931815,female
+ISIC_4547332,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,25,posterior torso,malignant,2.9,melanoma,histopathology,dermoscopic,IL_0454630,melanoma in situ,,,,True,IP_0549014,female
+ISIC_4728712,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,65,posterior torso,benign,2.3,nevus,histopathology,dermoscopic,IL_4195113,,,,,True,IP_1048784,female
+ISIC_4858225,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,65,head/neck,benign,5.3,nevus,histopathology,dermoscopic,IL_7174446,,,,,True,IP_3463579,female
+ISIC_5561187,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,45,lower extremity,malignant,2.2,melanoma,histopathology,dermoscopic,IL_3808292,melanoma in situ,,,,True,IP_8500979,male
+ISIC_6016537,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,75,head/neck,malignant,3.6,melanoma,histopathology,dermoscopic,IL_5045525,melanoma in situ,,,,True,IP_0549683,male
+ISIC_6086907,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,50,upper extremity,benign,9.0,nevus,histopathology,dermoscopic,IL_9907629,,,,,True,IP_3103178,male
+ISIC_6275817,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,40,anterior torso,malignant,4.1,melanoma,histopathology,dermoscopic,IL_1829358,melanoma in situ,,,,True,IP_5327237,male
+ISIC_6577694,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,55,lower extremity,benign,1.3,nevus,histopathology,dermoscopic,IL_1206698,,,,,True,IP_1394449,female
+ISIC_6618014,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,25,lower extremity,malignant,2.0,melanoma,histopathology,dermoscopic,IL_6948222,melanoma in situ,,,,True,IP_1295012,female
+ISIC_6873657,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,55,lower extremity,malignant,2.4,melanoma,histopathology,dermoscopic,IL_8704146,melanoma in situ,,,,True,IP_7819131,male
+ISIC_6967412,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,50,lower extremity,malignant,1.4,melanoma,histopathology,dermoscopic,IL_0078150,melanoma in situ,,,,True,IP_9124324,female
+ISIC_7021147,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,75,posterior torso,benign,4.3,nevus,histopathology,dermoscopic,IL_4234230,,,,,True,IP_7634290,male
+ISIC_7253650,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,50,lower extremity,benign,1.3,nevus,histopathology,dermoscopic,IL_3468258,,,,,True,IP_0066140,female
+ISIC_7594243,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,45,head/neck,malignant,4.5,melanoma,histopathology,dermoscopic,IL_8414535,melanoma in situ,,,,True,IP_2677654,female
+ISIC_7927389,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,40,lower extremity,malignant,2.1,melanoma,histopathology,dermoscopic,IL_9876914,melanoma in situ,,,,True,IP_4599256,female
+ISIC_8040663,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,70,upper extremity,malignant,5.6,melanoma,histopathology,dermoscopic,IL_5644356,melanoma in situ,,,,True,IP_6257025,male
+ISIC_8271856,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,30,upper extremity,benign,1.3,nevus,histopathology,dermoscopic,IL_0680332,,,,,True,IP_0435040,female
+ISIC_8368342,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,40,posterior torso,benign,4.9,nevus,histopathology,dermoscopic,IL_9738229,,,,,True,IP_2949973,male
+ISIC_8592733,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,50,upper extremity,malignant,1.3,melanoma,histopathology,dermoscopic,IL_5294891,melanoma in situ,,,,True,IP_1336435,male
+ISIC_8601948,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,50,posterior torso,benign,3.3,nevus,histopathology,dermoscopic,IL_2348903,,,,,True,IP_7843341,female
+ISIC_8690492,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,60,posterior torso,malignant,3.2,melanoma,histopathology,dermoscopic,IL_3585493,melanoma in situ,,,,True,IP_8439095,male
+ISIC_9051948,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,45,upper extremity,malignant,2.2,melanoma,histopathology,dermoscopic,IL_6680242,melanoma in situ,,,,True,IP_4540588,female
+ISIC_9141085,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,45,lateral torso,benign,2.0,nevus,histopathology,dermoscopic,IL_3191047,,,,,True,IP_7859449,female
+ISIC_9543045,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,30,posterior torso,malignant,8.2,melanoma,histopathology,dermoscopic,IL_5515726,invasive melanoma,0/mm^2,0.9,False,True,IP_4627929,male
+ISIC_9928278,Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital,CC-BY,50,anterior torso,malignant,3.5,melanoma,histopathology,dermoscopic,IL_2940342,melanoma in situ,,,,True,IP_8523969,male

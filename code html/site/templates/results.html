@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<title>PAF MEJEC</title>
+<meta name="description" content="results">
+</head>
+
+<body>
+    <h1>Image prétraitée</h1>
+    {% if symetrie==True %}
+      <h2>Le grain de beauté est {{ "symétrique" }}</h2>
+    {% else %}
+      <h2>Le grain de beauté est {{ "antisymétrique" }}</h2>
+    {% endif %}
+
+    <img src="{{url_for('static', filename='uploaded_file.png')}}" style="max-width: min(100vw, 100vh); max-height:  min(100vw, 100vh); width:auto; height:auto "/>
+    <img src="{{url_for('static', filename='img_contoured.png')}}" style="max-width: min(100vw, 100vh); max-height:  min(100vw, 100vh); width:auto; height:auto "/>
+    
+</body>
+</html>
