@@ -1,3 +1,5 @@
+import os
+
 from PIL import Image
 
 
@@ -13,12 +15,20 @@ def compress_jpeg(input_image_path, output_image_path, quality):
     image.save(output_image_path, format="JPEG", quality=quality,subsampling=1)
 
 
+    return output_image_path
+
+
 # Chemins d'entrée et de sortie des images
 input_path = "/Users/modyba/Desktop/PAF_MEJEC-COMPRESSION/essai2.jpg"
 output_path = "essai2_compressed_jpeg_quality=75.jpeg"
-
 # Qualité de compression (valeur entre 1 et 95)
 quality =75
 
 # Appeler la fonction de compression JPEG
-compress_jpeg(input_path, output_path, quality)
+image = compress_jpeg(input_path, output_path, quality)
+
+compressed_image_size = os.path.getsize(image) / 1024
+print ( compressed_image_size)
+
+
+
