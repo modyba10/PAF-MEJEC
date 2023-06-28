@@ -1,6 +1,7 @@
 from flask import request, Flask, render_template, url_for
 #~ imports for traitement
 import numpy as np
+from PIL import Image
 import cv2
 from matplotlib import pyplot as plt
 import os
@@ -116,6 +117,22 @@ def detection_symetrie(img):
         symmetric=False
     
     return symmetric
+
+def compress_jpeg(input_image_path, output_image_path, quality):
+
+    # Ouvrir l'image en utilisant Pillow
+    image = Image.open(input_image_path)
+
+    # Convertir l'image en mode RVB si elle n'est pas déjà en RVB
+    if image.mode != "RGB":
+        image = image.convert("RGB")
+
+    # Effectuer la compression JPEG en enregistrant l'image avec la qualité spécifiée
+    image.save(output_image_path, format="JPEG", quality=quality,subsampling=1)
+
+
+    return output_image_path
+
 
 #* fonction pipeline
 def pipeline2 (path):
