@@ -3,16 +3,105 @@
 <head>
 <title>PAF MEJEC</title>
 <meta name="description" content="homepage">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #282828;
+    }
+
+    h2 {
+        text-align: center;
+        color: #03224c;
+    }
+
+    h3 {
+        text-align: center;
+        color: #03224c;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="file"] {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #042a5f;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #03224c;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+        margin-top: 20px;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
+
+    .warning {
+        text-align: center;
+        color: #c62828;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 4px;
+    }
+
+</style>
+</head>
+
 </head>
 
 
+
 <body>
-    <h1>Image Upload Example</h1>
+    <h1>PAF MEJEC</h1>
+    <h2>Par Mody Ba, Ethan Barriol, Colin Picolet, Julia Tevissen</h2>
+    <h3>Encadrés par Elsa Angelini</h3>
 
     <form action="" method="post" enctype="multipart/form-data">
         <input type="file" name="imageFile" id="imageFile">
         <input type="submit" value="Upload and Process">
     </form>
+
+    <div class="warning">
+        <p>L'image doit avoir un éclairage uniforme, être centrée et zoomée sur le grain de beauté</p>
+    </div>
+
+    <div class="image-container">
+        <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/Logo_T%C3%A9l%C3%A9com_ParisTech.svg/langfr-800px-Logo_T%C3%A9l%C3%A9com_ParisTech.svg.png" alt="Logo" />
+    </div>
 
 </body>
 </html>

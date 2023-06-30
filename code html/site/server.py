@@ -1,10 +1,18 @@
 from flask import request, Flask, render_template, url_for
 #~ imports for traitement
 import numpy as np
-from PIL import Image
 import cv2
-from matplotlib import pyplot as plt
 import os
+from PIL import Image
+
+#~import couleurs
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+from numpy.linalg import norm
+
+
+#! la commande pour run le serveur
+# python -m flask --app server run
 
 app = Flask(__name__)
 
@@ -13,24 +21,26 @@ def upload_file():
     if request.method == 'POST':
         # if len(list(request.files.values()))< 1:
         #     return "Please send in a file <script>setTimeout(() => location.replace(/), 2000)</script>"
+        
         f = list(request.files.values())[0]
+        
         f.save('./static/uploaded_file.png')
+        compress_jpeg('./static/uploaded_file.png', './static/compressed_file.png', quality=90)
         
         #traitement de l'image
-        
-        img_countoured, contour, symetrie = pipeline2('./static/uploaded_file.png')
+        img_countoured, contour, symetrie = pipeline2('./static/compressed_file.png')
         cv2.imwrite('./static/img_contoured.png', img_countoured)
         
-        page=render_template("results.html", symetrie=symetrie)
+        #traitement des couleurs
+        diag_couleurs, nb_couleurs = couleur('./static/compressed_file.png')
+        
+        page=render_template("results.html", symetrie=symetrie, nb_couleurs=nb_couleurs)
         
         return page
     
     elif request.method == "GET":
         return render_template("webpage.html")
     
-
-
-
 
 
 #* code de traitement de l'image
@@ -118,22 +128,6 @@ def detection_symetrie(img):
     
     return symmetric
 
-def compress_jpeg(input_image_path, output_image_path, quality):
-
-    # Ouvrir l'image en utilisant Pillow
-    image = Image.open(input_image_path)
-
-    # Convertir l'image en mode RVB si elle n'est pas déjà en RVB
-    if image.mode != "RGB":
-        image = image.convert("RGB")
-
-    # Effectuer la compression JPEG en enregistrant l'image avec la qualité spécifiée
-    image.save(output_image_path, format="JPEG", quality=quality,subsampling=1)
-
-
-    return output_image_path
-
-
 #* fonction pipeline
 def pipeline2 (path):
     image = cv2.imread(path)
@@ -146,4 +140,87 @@ def pipeline2 (path):
     
     return img_countoured, contour, symetrie
 
-##mettre le ML ici
+
+#* fonction compresion
+def compress_jpeg(input_image_path, output_image_path, quality):
+    #quality between 1 and 95
+    
+    
+    # Ouvrir l'image en utilisant Pillow
+    image = Image.open(input_image_path)
+
+    # Convertir l'image en mode RVB si elle n'est pas déjà en RVB
+    if image.mode != "RGB":
+        image = image.convert("RGB")
+
+    # Effectuer la compression JPEG en enregistrant l'image avec la qualité spécifiée
+    image.save(output_image_path, format="JPEG", quality=quality,subsampling=1)
+    
+    
+
+#* fonction couleurs
+def centroid_histogram(clt):
+    numLabels = np.arange(0, len(np.unique(clt.labels_)) + 1)
+    (hist, _) = np.histogram(clt.labels_, bins = numLabels)
+
+    hist = hist.astype("float")
+    hist /= hist.sum()
+
+    return hist
+
+def plot_colors(hist, centroids):
+    bar = np.zeros((50, 300, 3), dtype = "uint8")
+    startX = 0
+
+    for (percent, color) in zip(hist, centroids):
+
+        endX = startX + (percent * 300)
+        cv2.rectangle(bar, (int(startX), 0), (int(endX), 50),
+        color.astype("uint8").tolist(), -1)
+        startX = endX
+    return bar
+
+def distances(A):
+    d = []
+    for i in range(5) :
+        for j in range(i) :
+            if i!=j :
+                n = norm(A[i]-A[j])
+                d.append(n)
+    return d
+
+def couleurDifferentes(A):
+    c = [A[0]]
+    n =[]
+    for i in range(1,len(A)):
+        for j in range(len(c)):
+            if i!=j:
+                n.append(norm(c[j]-A[i]))
+        if min(n) > 50:
+            c.append(A[i])
+            n=[]
+    return c
+
+def couleur(path):
+    image = cv2.imread(path)
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    
+    image = debruitage(image)
+    image = dullrazor(image)
+    
+    image = image.reshape((image.shape[0] * image.shape[1], 3))
+
+    clt = KMeans(n_clusters = 6)
+    clt.fit(image)
+
+    hist = centroid_histogram(clt)
+
+    bar =plot_colors(hist, clt.cluster_centers_) #diagramme plt
+    plt.imsave("./static/diagramme.jpg",bar)
+
+    C = np.sort(clt.cluster_centers_)
+    L = couleurDifferentes(C)
+    print("il y a", len(L), "couleurs différentes")
+
+    return bar, len(L)
+

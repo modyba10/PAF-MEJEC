@@ -3,18 +3,63 @@
 <head>
 <title>PAF MEJEC</title>
 <meta name="description" content="results">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    h2 {
+        text-align: center;
+        color: #555;
+        margin-top: 20px;
+    }
+
+    h3 {
+        text-align: center;
+        color: #03224c;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        max-height: 100%;
+        width: 200px;
+        height: auto;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+</style>
 </head>
 
 <body>
     <h1>Image prétraitée</h1>
     {% if symetrie==True %}
-      <h2>Le grain de beauté est {{ "symétrique" }}</h2>
+      <h3>Le grain de beauté est {{ "symétrique" }}</h3>
     {% else %}
-      <h2>Le grain de beauté est {{ "antisymétrique" }}</h2>
+      <h3>Le grain de beauté est {{ "antisymétrique" }}</h3>
     {% endif %}
 
-    <img src="{{url_for('static', filename='uploaded_file.png')}}" style="max-width: min(100vw, 100vh); max-height:  min(100vw, 100vh); width:auto; height:auto "/>
-    <img src="{{url_for('static', filename='img_contoured.png')}}" style="max-width: min(100vw, 100vh); max-height:  min(100vw, 100vh); width:auto; height:auto "/>
     
+    <h3>L'histogramme des couleurs présentes sur l'image </h3>
+    <img src="{{url_for('static', filename='./diagramme.jpg')}}" style="max-width: min(100vw, 100vh, 400px); max-height:  min(100vw, 100vh); width:auto; height:auto "/>
+
+    <h3>L'image originale</h3>
+    <img src="{{url_for('static', filename='uploaded_file.png')}}" style="max-width: min(100vw, 100vh, 400px); max-height:  min(100vw, 100vh); width:auto; height:auto "/>
+    
+    <h3>L'image compressée</h3>
+    <img src="{{url_for('static', filename='compressed_file.png')}}" style="max-width: min(100vw, 100vh, 400px); max-height:  min(100vw, 100vh); width:auto; height:auto "/>
+    
+    <h3>L'image traitée après détection de contours</h3>
+    <img src="{{url_for('static', filename='img_contoured.png')}}" style="max-width: min(100vw, 100vh, 400px); max-height:  min(100vw, 100vh); width:auto; height:auto "/>
+    
+
 </body>
 </html>

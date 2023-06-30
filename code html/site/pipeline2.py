@@ -1,9 +1,11 @@
 # code de traitement de l'image
 
-#~ imports
+#~ imports pretraitement
 import numpy as np
 import cv2
 from matplotlib import pyplot as plt
+#~ imports compression
+from PIL import Image
 
 # * pipeline 2 : debruitage, dullrazor, égalisation, détection de contours, détection de symétrie
 
@@ -107,3 +109,20 @@ def pipeline2 (path):
     symetrie = detection_symetrie(img_countoured)
     
     return img_countoured, contour, symetrie
+
+
+#* fonction compresion
+
+def compress_jpeg(image, output_image_path, quality):
+    #quality between 1 and 95
+    
+    # l'image est deja en memoire
+    # # # Ouvrir l'image en utilisant Pillow
+    # # image = Image.open(input_image_path)
+
+    # Convertir l'image en mode RVB si elle n'est pas déjà en RVB
+    if image.mode != "RGB":
+        image = image.convert("RGB")
+
+    # Effectuer la compression JPEG en enregistrant l'image avec la qualité spécifiée
+    image.save(output_image_path, format="JPEG", quality=quality,subsampling=1)
