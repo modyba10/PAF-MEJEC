@@ -9,6 +9,7 @@ from PIL import Image
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 from numpy.linalg import norm
+from sklearn.cluster import KMeans
 
 
 #! la commande pour run le serveur
@@ -142,20 +143,39 @@ def pipeline2 (path):
 
 
 #* fonction compresion
-def compress_jpeg(input_image_path, output_image_path, quality):
-    #quality between 1 and 95
-    
-    
-    # Ouvrir l'image en utilisant Pillow
-    image = Image.open(input_image_path)
 
-    # Convertir l'image en mode RVB si elle n'est pas déjà en RVB
-    if image.mode != "RGB":
-        image = image.convert("RGB")
+def compress_image(image_path):
+    # Chargement de l'image
+    k= 64
+    image = Image.open(image_path)
 
-    # Effectuer la compression JPEG en enregistrant l'image avec la qualité spécifiée
-    image.save(output_image_path, format="JPEG", quality=quality,subsampling=1)
-    
+    # Conversion de l'image en un tableau numpy
+    pixels = np.array(image)
+
+    # Obtention des dimensions de l'image
+    width, height, _ = pixels.shape
+
+    # Aplatir l'image en une liste de pixels
+    flattened_pixels = pixels.reshape(width * height, -1)
+
+    # Appliquer l'algorithme K-means
+    kmeans = KMeans(n_clusters=k, random_state=0, n_init=10)
+    kmeans.fit(flattened_pixels)
+
+    # Assigner chaque pixel au centroïde le plus proche
+    compressed_pixels = kmeans.labels_
+
+    # Récupération des valeurs des centroïdes
+    centroid_values = kmeans.cluster_centers_
+
+    # Création de la nouvelle image compressée
+    compressed_image = centroid_values[compressed_pixels].reshape(width, height, -1)
+
+    # Conversion de l'array numpy en image PIL
+    compressed_image = Image.fromarray(np.uint8(compressed_image))
+
+    # Retourner l'image compressée
+    return compressed_image
     
 
 #* fonction couleurs
